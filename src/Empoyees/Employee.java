@@ -10,7 +10,7 @@ public class Employee { //dataclass
 
     private double salary;
 
-    Employee(String name, String surname, String patronymic, int numberOfDepartment, double salary){
+    Employee(String surname, String name, String patronymic, int numberOfDepartment, double salary){
         id = countID;
         countID++;
         this.name = name;
@@ -54,8 +54,8 @@ public class Employee { //dataclass
 
     @Override
     public String toString() {
-        return "id: " + id + ", department number: " + numberOfDepartment + ", " +
+        return "id: " + id + ", Department number: " + numberOfDepartment + ", " +
                 surname + " " + name + " " + patronymic +
-                ", salary = " + salary;
+                ", Salary: " + salary;
     }
 }
