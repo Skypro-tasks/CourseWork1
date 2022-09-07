@@ -25,8 +25,8 @@ public class EmployeeBook {
     public double findSumOfSalaryAllEmployees(){
         double sum = 0;
         for (int i = 0; i < size; i++) {
-            Employee employee = employees[i];
-            sum = sum + employee.getSalary();
+            //Employee employee = employees[i];
+            sum = sum + employees[i].getSalary();
         }
         return sum;
     }
