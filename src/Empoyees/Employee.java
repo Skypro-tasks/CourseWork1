@@ -58,4 +58,6 @@ public class Employee { //dataclass
                 surname + " " + name + " " + patronymic +
                 ", Salary: " + salary;
     }
+
+
 }
