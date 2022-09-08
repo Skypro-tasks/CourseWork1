@@ -1,6 +1,6 @@
 package Empoyees;
 
-public class EmployeeBook {
+ class EmployeeBook {
     private final Employee[] employees;
     private int size;
 
@@ -15,6 +15,63 @@ public class EmployeeBook {
         Employee newEmployee = new Employee(surname, name, patronymic, numberOfDepartment, salary);
         employees[size++] = newEmployee;
     }
+
+    public void removeEmployee(String surname, String name, String patronymic, int id){
+        for (int i = 0; i < size; i++) {
+            if(employees[i].getSurname().equals(surname) && employees[i].getName().equals(name) &&
+                    employees[i].getPatronymic().equals(patronymic) && employees[i].getId() == id){
+                System.out.println("Employee " + getFullName(employees[i]) + " is removed.");
+                System.arraycopy(employees, i + 1, employees, i, size - i - 1);
+                employees[size - 1] = null;
+                size--;
+                return;
+            }
+        }
+    }
+
+    public void removeEmployee(int id){
+        for (int i = 0; i < size; i++) {
+            if(employees[i].getId() == id){
+                System.out.println("Employee " + getFullName(employees[i]) + " is removed.");
+                System.arraycopy(employees, i + 1, employees, i, size - i - 1);
+                employees[size - 1] = null;
+                size--;
+                return;
+            }
+        }
+    }
+
+    public void removeEmployee(String surname, String name, String patronymic){
+        for (int i = 0; i < size; i++) {
+            if(employees[i].getSurname().equals(surname) && employees[i].getName().equals(name) &&
+                    employees[i].getPatronymic().equals(patronymic)){
+                System.out.println("Employee " + getFullName(employees[i]) + " is removed.");
+                System.arraycopy(employees, i + 1, employees, i, size - i - 1);
+                employees[size - 1] = null;
+                size--;
+                return;
+            }
+        }
+    }
+
+    public void changeSalaryEmployee(String surname, String name, String patronymic, double newSalary){
+        for (int i = 0; i < size; i++) {
+            if(employees[i].getSurname().equals(surname) && employees[i].getName().equals(name) &&
+                    employees[i].getPatronymic().equals(patronymic)){
+                employees[i].setSalary(newSalary);
+            }
+        }
+    }
+
+     public void changeNumberOfDepartmentEmployee(String surname, String name, String patronymic,  int newNumberOfDepartment){
+         for (int i = 0; i < size; i++) {
+             if(employees[i].getSurname().equals(surname) && employees[i].getName().equals(name) &&
+                     employees[i].getPatronymic().equals(patronymic)){
+                 employees[i].setNumberOfDepartment(newNumberOfDepartment);
+             }
+         }
+     }
+
 
     public void printAllEmployees() {
         for (int i = 0; i < size; i++) {
@@ -170,6 +227,17 @@ public class EmployeeBook {
             }
         }
     }
+
+    public void printRangeEmployee(){
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 0; j < size; j++) {
+                if(employees[j].getNumberOfDepartment() == i){
+                    System.out.println("Department " + employees[j].getNumberOfDepartment() + ", " + getFullName(employees[j]));
+                }
+            }
+        }
+    }
+
 
 
 }

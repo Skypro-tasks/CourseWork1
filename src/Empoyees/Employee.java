@@ -1,5 +1,7 @@
 package Empoyees;
 
+import java.util.Objects;
+
 public class Employee { //dataclass
 
     private String name, surname, patronymic;
@@ -58,6 +60,5 @@ public class Employee { //dataclass
                 surname + " " + name + " " + patronymic +
                 ", Salary: " + salary;
     }
-
 
 }
