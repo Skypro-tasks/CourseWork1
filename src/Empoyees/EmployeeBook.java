@@ -88,25 +88,29 @@ package Empoyees;
     }
 
     public void findEmployeeWithMinSalary() {
-        double min = employees[0].getSalary();
-        int num = 0;
-        for (int i = 0; i < size; i++) {
-            if (min > employees[i].getSalary()) {
-                num = i;
+        if(employees[0] != null) {
+            double min = employees[0].getSalary();
+            int num = 0;
+            for (int i = 0; i < size; i++) {
+                if (min > employees[i].getSalary()) {
+                    num = i;
+                }
             }
+            System.out.println("Employee with minimum salary: " + employees[num].toString());
         }
-        System.out.println("Employee with minimum salary: " + employees[num].toString());
     }
 
     public void findEmployeeWithMaxSalary() {
-        double max = employees[0].getSalary();
-        int num = 0;
-        for (int i = 0; i < size; i++) {
-            if (max < employees[i].getSalary()) {
-                num = i;
+        if(employees[0] != null) {
+            double max = employees[0].getSalary();
+            int num = 0;
+            for (int i = 0; i < size; i++) {
+                if (max < employees[i].getSalary()) {
+                    num = i;
+                }
             }
+            System.out.println("Employee with maximum salary: " + employees[num].toString());
         }
-        System.out.println("Employee with maximum salary: " + employees[num].toString());
     }
 
     public double findAverageSalary() {
@@ -196,12 +200,10 @@ package Empoyees;
     }
 
     public void printEmployeesInfoInDepartment(int numberOfDepartment){
-        System.out.println("Enployees. Department " + numberOfDepartment);
+        System.out.println("Employees. Department " + numberOfDepartment);
         for (int i = 0; i < size; i++) {
             if(employees[i].getNumberOfDepartment() == numberOfDepartment){
-                System.out.println("id: " + employees[i].getId() + ", " + employees[i].getSurname() +
-                        " " + employees[i].getName() + " " + employees[i].getPatronymic() +
-                        ", Salary: " + employees[i].getSalary());
+                System.out.println(employees[i]);
             }
         }
     }
@@ -210,9 +212,7 @@ package Empoyees;
         System.out.println("Employees with salary less than " + level);
         for (int i = 0; i < size; i++) {
             if(employees[i].getSalary() < level){
-                System.out.println("id: " + employees[i].getId() + ", " + employees[i].getSurname() +
-                        " " + employees[i].getName() + " " + employees[i].getPatronymic() +
-                        ", Salary: " + employees[i].getSalary());
+                System.out.println(employees[i]);
             }
         }
     }
@@ -221,9 +221,7 @@ package Empoyees;
         System.out.println("Employees with salary more than " + level);
         for (int i = 0; i < size; i++) {
             if(employees[i].getSalary() >= level){
-                System.out.println("id: " + employees[i].getId() + ", " + employees[i].getSurname() +
-                        " " + employees[i].getName() + " " + employees[i].getPatronymic() +
-                        ", Salary: " + employees[i].getSalary());
+                System.out.println(employees[i]);
             }
         }
     }
