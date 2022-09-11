@@ -16,10 +16,10 @@ public class Main {
         employeeBook.addEmployee("Smirnov", "Anatoliy", "Nicolaevich", 1, 36_790);
         employeeBook.addEmployee("Prihod'ko", "Elena", "Sergeevna", 1, 78_400);
 
-//        //Получить список всех сотрудников со всеми имеющимися по ним данными (вывести в консоль значения всех полей (toString)).
-//        employeeBook.printAllEmployees();
-//        System.out.println();
-//
+        //Получить список всех сотрудников со всеми имеющимися по ним данными (вывести в консоль значения всех полей (toString)).
+        employeeBook.printAllEmployees();
+        System.out.println();
+
 //        //Посчитать сумму затрат на зарплаты в месяц.
 //        double sum = employeeBook.findSumOfSalaryAllEmployees();
 //        System.out.println(sum);
@@ -64,12 +64,12 @@ public class Main {
 //        //Получить в качестве параметра число и найти Всех сотрудников с зарплатой больше (или равно) числа (вывести id, Ф. И. О. и зарплатой в консоль).
 //        employeeBook.findEmployeesWithSalaryMoreLevel(100_000);
 //
-//        //Удалить сотрудника (находим сотрудника по Ф. И. О. и/или id, обнуляем его ячейку в массиве).
-//        employeeBook.removeEmployee("Smirnov", "Anatoliy", "Nicolaevich", 5);
-//        employeeBook.removeEmployee(3);
-//        employeeBook.removeEmployee("Prihod'ko", "Elena", "Sergeevna");
-//        employeeBook.printAllEmployees();
-//
+        //Удалить сотрудника (находим сотрудника по Ф. И. О. и/или id, обнуляем его ячейку в массиве).
+        employeeBook.removeEmployee("Smirnov", "Anatoliy", "Nicolaevich", 6);
+        employeeBook.removeEmployee(3);
+        employeeBook.removeEmployee("Prihod'ko", "Elena", "Sergeevna");
+        employeeBook.printAllEmployees();
+
 //        employeeBook.addEmployee("Smirnov", "Anatoliy", "Nicolaevich", 1, 36_790);
 //        employeeBook.addEmployee("Prihod'ko", "Elena", "Sergeevna", 1, 78_400);
 //        employeeBook.addEmployee("Petrova", "Maria", "Victorovna", 3, 45_750);

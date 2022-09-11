@@ -20,7 +20,7 @@ package Empoyees;
         for (int i = 0; i < size; i++) {
             if(employees[i].getSurname().equals(surname) && employees[i].getName().equals(name) &&
                     employees[i].getPatronymic().equals(patronymic) && employees[i].getId() == id){
-                System.out.println("Employee " + getFullName(employees[i]) + " is removed.");
+                System.out.println("Employee " + employees[i].getFullName() + " is removed.");
                 System.arraycopy(employees, i + 1, employees, i, size - i - 1);
                 employees[size - 1] = null;
                 size--;
@@ -32,7 +32,7 @@ package Empoyees;
     public void removeEmployee(int id){
         for (int i = 0; i < size; i++) {
             if(employees[i].getId() == id){
-                System.out.println("Employee " + getFullName(employees[i]) + " is removed.");
+                System.out.println("Employee " + employees[i].getFullName() + " is removed.");
                 System.arraycopy(employees, i + 1, employees, i, size - i - 1);
                 employees[size - 1] = null;
                 size--;
@@ -45,7 +45,7 @@ package Empoyees;
         for (int i = 0; i < size; i++) {
             if(employees[i].getSurname().equals(surname) && employees[i].getName().equals(name) &&
                     employees[i].getPatronymic().equals(patronymic)){
-                System.out.println("Employee " + getFullName(employees[i]) + " is removed.");
+                System.out.println("Employee " + employees[i].getFullName() + " is removed.");
                 System.arraycopy(employees, i + 1, employees, i, size - i - 1);
                 employees[size - 1] = null;
                 size--;
@@ -117,13 +117,13 @@ package Empoyees;
         return findSumOfSalaryAllEmployees() / size;
     }
 
-    public String getFullName(Employee employee) {
-        return employee.getSurname() + " " + employee.getName() + " " + employee.getPatronymic();
-    }
+//    public String getFullName(Employee employee) {
+//        return employee.getSurname() + " " + employee.getName() + " " + employee.getPatronymic();
+//    }
 
     public void printFullNamesAllEmployees() {
         for (int i = 0; i < size; i++) {
-            System.out.println(getFullName(employees[i]));
+            System.out.println(employees[i].getFullName());
         }
     }
 
@@ -230,7 +230,7 @@ package Empoyees;
         for (int i = 1; i <= 5; i++) {
             for (int j = 0; j < size; j++) {
                 if(employees[j].getNumberOfDepartment() == i){
-                    System.out.println("Department " + employees[j].getNumberOfDepartment() + ", " + getFullName(employees[j]));
+                    System.out.println("Department " + employees[j].getNumberOfDepartment() + ", " + employees[j].getFullName());
                 }
             }
         }

@@ -63,4 +63,8 @@ public class Employee { //dataclass
                 ", Salary: " + salary;
     }
 
+    public String getFullName() {
+        return surname + " " + name + " " + patronymic;
+    }
+
 }
